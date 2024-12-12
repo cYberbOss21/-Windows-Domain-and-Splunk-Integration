@@ -1,4 +1,4 @@
-# -Windows-Domain-and-Splunk-Integration
+# Windows-Domain-and-Splunk-Integration
 
 This project involves setting up an Active Directory domain environment with example.local, configuring users, groups, and organizational units, and integrating Splunk Enterprise for centralized log monitoring and analysis. The Splunk Universal Forwarder was installed on the domain controller to forward Windows Event Logs, enabling real-time visibility into system and security events. This setup demonstrates the foundational steps required for creating a secure and monitored Windows domain environment, providing the basis for future audits and alerting.
 
@@ -58,8 +58,8 @@ ________________________________________
 1.	Open **DNS Manager** from the **Tools** menu in Server Manager.
 2.	Verify that a forward lookup zone for example.local exists.
 3.	Create a reverse lookup zone:
-       		 o Right-click Reverse Lookup Zones > New Zone.
-       		 o Follow the wizard to create a primary zone for your network (e.g., 192.168.10.x).
+                - Right-click Reverse Lookup Zones > New Zone.
+                - Follow the wizard to create a primary zone for your network (e.g., 192.168.10.x).
 ________________________________________
 **Adding Users and Groups** 
 **Create Organizational Units (OUs)** 
