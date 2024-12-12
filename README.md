@@ -22,15 +22,15 @@ ________________________________________
  ![image](https://github.com/user-attachments/assets/8a7a5515-a325-4f89-ba4f-720274de2752)
 
 
-5.	Select the server to install roles on and click **Next**.
-6.	Choose **Active Directory Domain Services** and click **Add Features** when prompted.
+4.	Select the server to install roles on and click **Next**.
+5.	Choose **Active Directory Domain Services** and click **Add Features** when prompted.
 
    
  ![image](https://github.com/user-attachments/assets/2c3e037d-a793-44f5-a9f6-24b575a06b09)
 
 
-8.	Proceed through the wizard, leaving defaults selected, and click **Install**.
-9.	After installation, click on **Promote this server to a domain controller.**
+6.	Proceed through the wizard, leaving defaults selected, and click **Install**.
+7.	After installation, click on **Promote this server to a domain controller.**
     
  ![image](https://github.com/user-attachments/assets/85e81a6c-2ea6-48cf-a91b-5160114eed15)
 
