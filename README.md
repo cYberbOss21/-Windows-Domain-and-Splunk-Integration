@@ -138,7 +138,7 @@ Ensured all machines were on the same subnet (xxx.xxx.xx.x).
    ![image](https://github.com/user-attachments/assets/83dd3b7e-457d-4114-a56c-1710fa86388a) 
    
    
-![image](https://github.com/user-attachments/assets/f33589dd-e8bf-43ad-bb93-f606a64d34e3)
+![image](https://github.com/user-attachments/assets/2067ab47-6aac-483a-a97b-7f4d4d819c41)
 
 
 Note: You may have to manually add the IP of the server in the Windows 10 VM
