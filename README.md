@@ -124,9 +124,11 @@ ________________________________________
 **Troubleshooting Issues**
 
 **DNS Delegation Warning**
+
 •Ignored as this was a standalone setup.
 
 **Cannot Ping Between Machines**
+
 •Ensured all machines were on the same subnet (xxx.xxx.xx.x).
    
    
@@ -139,10 +141,13 @@ ________________________________________
 Note: You may have to manually add the IP of the server in the Windows 10 VM
 
 • Verified NAT Network in VirtualBox was correctly configured.
+
 •Allowed ICMP traffic through Windows Firewall.
 
 **User Login Issues**
+
 •Confirmed correct domain name and username format (example\username).
+
 •Verified that the DNS server IP on the client machine was pointing to the domain controller.
 
 
@@ -177,10 +182,15 @@ You will be prompted to create an admin profile
 **Configure Ports on Kali**
 
 Ensure that the Splunk ports are open on the Kali Linux firewall:
+
 **Web Interface:** 8000
+
 **Deployment Server:** 8089
+
 **Forwarding Port:** 9997
+
 4. To allow these ports:
+
 Example:
 
         sudo iptables -A INPUT -p tcp --dport 9997 -j ACCEPT
@@ -192,7 +202,7 @@ Example:
      ![image](https://github.com/user-attachments/assets/5cb84385-ba82-4563-96ad-107de51b0b3b)
 
 
-3.	Name the index **windows_audit** and save.
+2.	Name the index **windows_audit** and save.
 
   ![image](https://github.com/user-attachments/assets/c3e79305-a89e-4b49-a9f8-dc51844f2494)
   
