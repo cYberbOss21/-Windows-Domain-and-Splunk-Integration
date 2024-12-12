@@ -36,6 +36,7 @@ ________________________________________
 
 
 Note: You will have to restart the server 
+________________________________________
 
 **Promote Server to Domain Controller**
 1.	Choose **Add a new forest** and enter example.local as the root domain name.
@@ -74,6 +75,7 @@ ________________________________________
 
    
  ![image](https://github.com/user-attachments/assets/78ea86f3-1e66-4305-9f6b-8271cb0af6bd)
+________________________________________
 
 
 **Create Users** 
@@ -88,7 +90,8 @@ ________________________________________
  
 2.	Fill in user details (e.g., Bob, username bob).
 3.	Set a password and configure options such as "User must change password at next logon," or the preference you prefer.
-   
+________________________________________
+
 **Create Groups** 
 1.	Right-click the appropriate OU > New > Group.
 2.	Enter a group name (e.g., IT_Admins) and select the scope (Global) and type (Security).
@@ -123,13 +126,13 @@ ________________________________________
 ________________________________________
 **Troubleshooting Issues**
 
-**DNS Delegation Warning**
+_**DNS Delegation Warning**_
 
-•Ignored as this was a standalone setup.
+Ignored as this was a standalone setup.
 
-**Cannot Ping Between Machines**
+_**Cannot Ping Between Machines**_
 
-•Ensured all machines were on the same subnet (xxx.xxx.xx.x).
+Ensured all machines were on the same subnet (xxx.xxx.xx.x).
    
    
    ![image](https://github.com/user-attachments/assets/83dd3b7e-457d-4114-a56c-1710fa86388a) 
@@ -143,12 +146,13 @@ Note: You may have to manually add the IP of the server in the Windows 10 VM
 • Verified NAT Network in VirtualBox was correctly configured.
 
 •Allowed ICMP traffic through Windows Firewall.
+________________________________________
 
-**User Login Issues**
+_**User Login Issues**_
 
-•Confirmed correct domain name and username format (example\username).
+Confirmed correct domain name and username format (example\username).
 
-•Verified that the DNS server IP on the client machine was pointing to the domain controller.
+Verified that the DNS server IP on the client machine was pointing to the domain controller.
 
 
 ![image](https://github.com/user-attachments/assets/7445fa07-6f6b-45c4-9fdd-5ec690f6bdc0)
@@ -178,22 +182,25 @@ You will be prompted to create an admin profile
 
 
 3.	Access Splunk Web at http://kali:8000.
+________________________________________
 
 **Configure Ports on Kali**
 
 Ensure that the Splunk ports are open on the Kali Linux firewall:
 
-**Web Interface:** 8000
+_**Web Interface:** 8000_
 
-**Deployment Server:** 8089
+_**Deployment Server:** 8089_
 
-**Forwarding Port:** 9997
+_**Forwarding Port:** 9997_
+
 
 4. To allow these ports:
 
 Example:
 
         sudo iptables -A INPUT -p tcp --dport 9997 -j ACCEPT
+________________________________________
   	
 **Create Index for Windows Logs**
 1.	In Splunk Web, go to **Settings** > **Indexes** > **New Index**.
@@ -221,8 +228,10 @@ ________________________________________
 
 2.	Run the installer and choose "On-premises Splunk Enterprise instance."
 3.	Set the deployment server to 192.168.10.4:9997 (Splunk Enterprise server IP).
+________________________________________
 
 **Configure Forwarder**
+
 _Navigate to:_
 
 	-C:\Program Files\SplunkUniversalForwarder\etc\system\local
@@ -290,7 +299,11 @@ ________________________________________
 **Create a Dashboard**
 1.	In Splunk Web, go to **Dashboards** > **Create New Dashboard.**
 2.	Add panels for:
-   -Login attempts over time.
-   -Top users by login failures.
-   -System errors.
+
+-Login attempts over time.
+
+-Top users by login failures.
+
+ -System errors.
+ 
 3.	Save and customize the dashboard layout.
