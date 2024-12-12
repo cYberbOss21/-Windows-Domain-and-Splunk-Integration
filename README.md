@@ -3,7 +3,7 @@
 This project involves setting up an Active Directory domain environment with example.local, configuring users, groups, and organizational units, and integrating Splunk Enterprise for centralized log monitoring and analysis. The Splunk Universal Forwarder was installed on the domain controller to forward Windows Event Logs, enabling real-time visibility into system and security events. This setup demonstrates the foundational steps required for creating a secure and monitored Windows domain environment, providing the basis for future audits and alerting.
 
 ________________________________________
-**1. Setting Up Active Directory Domain Services (AD DS)** 
+**Setting Up Active Directory Domain Services (AD DS)** 
 
 **Install AD DS Role on Windows Server**
 1. Open **Server Manager**.
@@ -44,23 +44,22 @@ Note: You will have to restart the server
   ![image](https://github.com/user-attachments/assets/0de97d36-4b86-42f7-b37d-3d1fb5374fcb)
 
  
-3.	Set the **Domain Functional Level** and **Forest Functional Level** to Windows Server 2016.
-4.	Check **Domain Name System (DNS) server** and set a Directory Services Restore Mode (DSRM) password.
+2.	Set the **Domain Functional Level** and **Forest Functional Level** to Windows Server 2016.
+3.	Check **Domain Name System (DNS) server** and set a Directory Services Restore Mode (DSRM) password.
 
    
  ![image](https://github.com/user-attachments/assets/cabf575a-b41c-4062-9706-fd884da6f76f)
 
 
-6.	Proceed through the wizard, ensuring NetBIOS domain name is set to EXAMPLE.
-7.	Complete the prerequisites check and click **Install**. The server will restart automatically.
+4.	Proceed through the wizard, ensuring NetBIOS domain name is set to EXAMPLE.
+5.	Complete the prerequisites check and click **Install**. The server will restart automatically.
 ________________________________________
 **Configuring DNS** 
 1.	Open **DNS Manager** from the **Tools** menu in Server Manager.
 2.	Verify that a forward lookup zone for example.local exists.
 3.	Create a reverse lookup zone:
-        o	Right-click Reverse Lookup Zones > New Zone.
-        o	Follow the wizard to create a primary zone for your network 
-          (e.g., 192.168.10.x).
+       		 o Right-click Reverse Lookup Zones > New Zone.
+       		 o Follow the wizard to create a primary zone for your network (e.g., 192.168.10.x).
 ________________________________________
 **Adding Users and Groups** 
 **Create Organizational Units (OUs)** 
